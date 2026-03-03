@@ -491,13 +491,7 @@ const PublicPlansSection = () => {
   }
 
   return (
-    <section className="py-10 sm:py-14 relative overflow-hidden">
-      {/* Background gradiente sutil */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-blue-500/5 dark:from-purple-500/10 dark:to-blue-500/10" />
-
-      {/* Elementos decorativos */}
-      <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-br from-brand-purple/10 to-transparent rounded-full blur-2xl" />
-      <div className="absolute bottom-4 right-4 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-transparent rounded-full blur-2xl" />
+    <section className="py-10 sm:py-14 relative overflow-hidden bg-transparent">
 
       <div className="container mx-auto px-4 sm:px-6 max-w-6xl relative z-10">
         {/* Section Header */}
