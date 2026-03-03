@@ -9,7 +9,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { toast } from 'sonner';
 import { pdfRgService, PdfRgPedido, PdfRgStatus } from '@/services/pdfRgService';
 import { Search, Eye, Trash2, RefreshCw, Download, Loader2, Upload, Package, DollarSign, Hammer, CheckCircle, X } from 'lucide-react';
-import PageHeaderCard from '@/components/dashboard/PageHeaderCard';
+import DashboardTitleCard from '@/components/dashboard/DashboardTitleCard';
 import { getFullApiUrl } from '@/utils/apiHelper';
 import { cookieUtils } from '@/utils/cookieUtils';
 
@@ -308,9 +308,10 @@ const AdminPedidos = () => {
 
   return (
     <div className="space-y-6">
-      <PageHeaderCard
+      <DashboardTitleCard
         title="Gerenciar Pedidos"
-        subtitle="Visualize e gerencie todos os pedidos de PDF RG"
+        icon={<Package className="h-4 w-4 sm:h-5 sm:w-5" />}
+        backTo="/dashboard/admin"
       />
 
       {/* Filters */}

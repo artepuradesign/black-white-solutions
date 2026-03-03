@@ -7,7 +7,7 @@ import { toast } from 'sonner';
 import { pdfRgService, PdfRgPedido, PdfRgStatus } from '@/services/pdfRgService';
 import { Eye, Download, Loader2, Package, DollarSign, Hammer, CheckCircle, ClipboardList, Upload, FileDown } from 'lucide-react';
 import { useAuth } from '@/contexts/AuthContext';
-import SimpleTitleBar from '@/components/dashboard/SimpleTitleBar';
+import DashboardTitleCard from '@/components/dashboard/DashboardTitleCard';
 import { useNavigate } from 'react-router-dom';
 
 const STATUS_ORDER: PdfRgStatus[] = ['realizado', 'pagamento_confirmado', 'em_confeccao', 'entregue'];
@@ -166,10 +166,9 @@ const MeusPedidos = () => {
 
   return (
     <div className="space-y-4 md:space-y-6 max-w-5xl mx-auto">
-      <SimpleTitleBar
+      <DashboardTitleCard
         title="Meus Pedidos"
-        subtitle="Acompanhe o status dos seus pedidos"
-        onBack={() => navigate('/dashboard')}
+        icon={<ClipboardList className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
 
       {loading ? (

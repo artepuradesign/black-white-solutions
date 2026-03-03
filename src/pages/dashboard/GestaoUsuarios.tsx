@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { clearRequestsCache } from '@/config/api';
 import { refreshNotifications } from '@/utils/notificationRefresh';
-import PageHeaderCard from '@/components/dashboard/PageHeaderCard';
+import DashboardTitleCard from '@/components/dashboard/DashboardTitleCard';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -396,9 +396,9 @@ const GestaoUsuarios = () => {
 
   return (
     <div className="space-y-6">
-      <PageHeaderCard 
-        title="Gestão de Usuários" 
-        subtitle="Controle completo sobre todos os usuários do sistema"
+      <DashboardTitleCard
+        title="Gestão de Usuários"
+        icon={<Users className="h-4 w-4 sm:h-5 sm:w-5" />}
       />
 
       <UserStatsCards stats={stats} />
