@@ -26,12 +26,12 @@ export const defaultLiquidGlassConfig: LiquidGlassConfig = {
   tintSaturation: 60,
   tintHue: 0,
   contrast: 100,
-  brightness: 200,
+  brightness: 110,
   invert: 0,
   edgeSpecularity: 100,
-  cornerRadius: 26,
+  cornerRadius: 10,
   opacity: 100,
-  backgroundAlpha: 7,
+  backgroundAlpha: 5,
 };
 
 interface LiquidGlassContextType {
