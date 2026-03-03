@@ -166,11 +166,11 @@ const DashboardLayout = ({
         <AdminNotifications />
       </div>
       
-      <div className="flex flex-col h-screen w-full overflow-hidden relative z-10">
-        {/* Menu Superior - em todas as telas */}
+      <div className="relative z-10 min-h-screen">
+        {/* Menu Superior - sticky com transparência, igual à página inicial */}
         <MenuSuperior />
         
-        <div className="flex flex-1 overflow-hidden">
+        <div className="flex min-h-[calc(100vh-4rem)]">
           {/* Sidebar - mostrar em tablets (>=768px) e desktop */}
           {(isTablet || (!isMobile && !isTablet)) && (
             <Sidebar
@@ -187,11 +187,10 @@ const DashboardLayout = ({
             />
           )}
           
-          {/* Main content - ajusta automaticamente ao tamanho da sidebar */}
+          {/* Main content */}
           <main 
             className={`
               flex-1 
-              overflow-y-auto 
               relative 
               z-20 
               transition-all 
