@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
+import { useLiquidGlass } from "@/contexts/LiquidGlassContext";
+import { cn } from "@/lib/utils";
 
 interface DashboardTitleCardProps {
   title: string;
@@ -23,9 +25,12 @@ const DashboardTitleCard = ({
   right,
 }: DashboardTitleCardProps) => {
   const navigate = useNavigate();
+  const { config: liquidGlassConfig } = useLiquidGlass();
 
   return (
-    <Card>
+    <Card className={cn(
+      liquidGlassConfig.enabled && "liquid-glass-container border-white/20 bg-transparent"
+    )}>
       <CardHeader className="p-3 sm:p-6">
         <div className="flex items-center justify-between gap-2">
           <div className="min-w-0 flex-1">
